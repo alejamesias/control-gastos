@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Gastos Personales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Control de Gastos Personales</h1>
+
+        <!-- Resumen de Saldo -->
+        <div class="balance-card">
+            <h2>Saldo Disponible</h2>
+            <p id="saldo-total">$0</p>
+            <div class="totales-detalle">
+                <span class="ingreso-txt">Ingresos: <strong id="total-ingresos">$0</strong></span>
+                <span class="gasto-txt">Gastos: <strong id="total-gastos">$0</strong></span>
+            </div>
+        </div>
+
+        <!-- Formulario de Registro -->
+        <form id="form-movimiento">
+            <input type="text" id="descripcion" placeholder="Descripción (ej. Salario, Almuerzo)" required>
+            <input type="number" id="monto" placeholder="Monto ($)" required>
+            <select id="tipo">
+                <option value="ingreso">Ingreso (+)</option>
+                <option value="gasto">Gasto (-)</option>
+            </select>
+            <button type="submit">Agregar</button>
+        </form>
+
+        <!-- Zona para futuras mejoras (HU) -->
+        <div id="zona-filtros" class="filtros">
+            <h3>Historial de Movimientos</h3>
+        </div>
+
+        <!-- Lista de Movimientos -->
+        <ul id="lista-movimientos" class="lista"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
