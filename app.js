@@ -58,6 +58,8 @@ form.addEventListener('submit', (e) => {
     movimientos.push(nuevoMovimiento);
     form.reset();
     actualizarInterfaz();
+
+
 });
 
 // Eliminar movimiento
@@ -65,6 +67,12 @@ function eliminarMovimiento(id) {
     movimientos = movimientos.filter(mov => mov.id !== id);
     actualizarInterfaz();
 }
+
+//mejora rwalixada por aleja
+document.getElementById('btn-limpiar').addEventListener('click', () => {
+    movimientos = [];
+    actualizarInterfaz();
+});
 
 // Cargar datos al iniciar
 actualizarInterfaz();
