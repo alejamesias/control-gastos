@@ -39,6 +39,7 @@ function actualizarInterfaz() {
     saldoTotalEl.textContent = `$${saldo.toLocaleString()}`;
     totalIngresosEl.textContent = `$${ingresos.toLocaleString()}`;
     totalGastosEl.textContent = `$${gastos.toLocaleString()}`;
+    document.getElementById('contador-mov').textContent = movimientos.length;
 }
 
 // Agregar nuevo movimiento
