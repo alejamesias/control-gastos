@@ -75,4 +75,5 @@ document.getElementById('btn-limpiar').addEventListener('click', () => {
 });
 
 // Cargar datos al iniciar
-actualizarInterfaz();
+actualizarInterfaz()
+saldoTotalEl.style.color = saldo < 0? '#e74c3c' : '#ffffff';
