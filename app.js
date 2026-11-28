@@ -1,9 +1,8 @@
 // Datos iniciales de ejemplo
-let movimientos = [
+let movimientos = JSON.parse(localStorage.getItem('movimientos')) || [
     { id: 1, descripcion: 'Salario Mensual', monto: 2500000, tipo: 'ingreso' },
     { id: 2, descripcion: 'Mercado Supermercado', monto: 350000, tipo: 'gasto' }
 ];
-
 const form = document.getElementById('form-movimiento');
 const lista = document.getElementById('lista-movimientos');
 const saldoTotalEl = document.getElementById('saldo-total');
@@ -35,7 +34,8 @@ function actualizarInterfaz() {
         lista.appendChild(li);
     });
 
-    const saldo = ingresos - gastos;
+    const saldo = ingresos - gastos; localStorage.setItem('movimientos', JSON.stringify(movimientos));
+    localStorage.setItem('movimientos', JSON.stringify(movimientos));
     saldoTotalEl.textContent = `$${saldo.toLocaleString()}`;
     totalIngresosEl.textContent = `$${ingresos.toLocaleString()}`;
     totalGastosEl.textContent = `$${gastos.toLocaleString()}`;
