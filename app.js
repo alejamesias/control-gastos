@@ -47,7 +47,10 @@ form.addEventListener('submit', (e) => {
     const descripcion = document.getElementById('descripcion').value;
     const monto = parseFloat(document.getElementById('monto').value);
     const tipo = document.getElementById('tipo').value;
-
+if (monto <= 0) {
+    alert('El monto debe ser mayor a 0');
+    return;
+}
     const nuevoMovimiento = {
         id: Date.now(),
         descripcion,
